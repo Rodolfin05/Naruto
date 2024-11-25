@@ -1,0 +1,453 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('imagens/Background_naruto.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 70vh;
+    color: #ffffff;
+}
+
+.titulo {
+    font-size: 60px;
+    color: #ffae00;
+    text-shadow: 2px 2px 4px rgb(17, 17, 126);
+    text-align: center;
+}
+
+header .interface{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    align-items: center;
+}
+
+header .navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header img {
+    width: 200px;
+}
+
+header .navegacao ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .navegacao ul li {
+    margin: 0 20px;
+}
+
+header .navegacao ul li a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-size: 16px;
+    background-color: orange;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+header .modoEscuro li {
+    list-style: none;
+}
+
+header .modoEscuro li a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-size: 16px;
+    background-color: orange;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+header .navegacao ul li a:hover {
+    background-color: #b35f00;
+}
+
+header .modoEscuro li a:hover {
+    background-color: #b35f00;
+}
+
+section {
+    margin: 80px;
+}
+
+.inicio .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 60px;
+}
+
+.banner img {
+    width: 400px;
+    border-radius: 12px;
+}
+
+.introducao {
+    width: 50%;
+    text-align: justify;
+    color: orange;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.introducao h2 {
+    font-size: 25px;
+    text-align: justify;
+    -webkit-text-stroke: 0px;
+}
+
+.personagens .interface {
+    text-align: center;
+    align-items: center;
+}
+
+.galeria {
+    justify-content: center;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.personagem {
+    color: orange;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    width: calc(30% - 30px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.personagem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.personagem img {
+    width: 100%;
+    border-radius: 8px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.modal {
+    color: orange;
+    text-align: center;
+    align-items: center;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-conteudo {
+    border-radius: 12px;
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 50%;
+}
+
+.modal img {
+    width: 300px;
+    border-radius: 8px;
+}
+
+.modal-conteudo h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    -webkit-text-stroke: 0px;
+}
+
+.modal-conteudo p {
+    margin: 50px;
+    text-align: justify;
+}
+
+.episodios-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.episodio {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    width: calc(30% - 30px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.episodio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.episodio img {
+    width: 100%;
+    border-radius: 8px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.episodio h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+    color: orange;
+}
+
+.episodio p {
+    font-size: 0.9em;
+    color: orange;
+}
+
+button {
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #b35f00;
+}
+
+.contato{
+    text-align: center;
+}
+
+.contato .interface{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+form {
+    padding: 40px;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: orange;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff7f50;
+    outline: none;
+}
+
+
+footer {
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.desenvolvedor p{
+    margin: 10px;
+}
+
+.desenvolvedor a{
+    margin: 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.modalVideo {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalVideo-content {
+    background-color: white;
+    border-radius: 12px;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.mensagemSucesso {
+    display: none;
+    background-color:white;
+    border-radius: 12px;
+    text-align: center;
+    color: orange;
+    margin-top: 20px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mensagemSucesso img {
+    width: 200px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.fundo-escuro {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.borda-preta {
+    border-color: #000 !important;
+}
+
+.sombra-branca {
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1) !important;
+}
+
+@media screen and (max-width: 768px) {
+
+    body {
+        background-image: url(imagens/background_celular.jpg);
+    }
+    
+    .titulo {
+        font-size: 45px;
+        text-align: center;
+    }
+    
+
+    header .navegacao {
+        display: none;
+    }
+    
+    header img {
+        width: 100px;
+    }
+
+    section {
+        margin: 20px;
+    }
+
+    .inicio img {
+        width: 300px;
+    }
+
+    .inicio .interface{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inicio .introducao {
+        width: 100%;
+    }
+
+    .introducao h2 {
+        font-size: 15px;
+        text-align: justify;
+        -webkit-text-stroke: 0px;
+    }
+
+    .galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .personagem {
+        width: 250px;
+    }
+
+    .episodios-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .episodio {
+        width: 250px;
+    }
+
+    .formulario {
+        width: 300px;
+    }
+
+    .modal h2 {
+        font-size: 20px;
+    }
+
+    .modal img {
+        width: 100px;
+    }
+
+    .modal-conteudo {
+        padding: 10px;
+        width: 80%;
+    }
+
+    .modal-conteudo p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

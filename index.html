@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <title>Naruto</title>
+</head>
+<body>
+
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <img src="imagens/Naruto_logo.svg.png">
+            </div>
+            
+            <nav class="navegacao">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#personagens">Personagens</a></li>
+                    <li><a href="#episodios">Episódios Favoritos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="modoEscuro">
+                <li><a id="alterarFundoBtn">Modo Escuro</a></li>
+            </div>
+        </header>
+
+        <section class="inicio" id="inicio">
+            <div class="interface">
+                <div class="banner">
+                    <img src="imagens/banner_naruto.jpg" alt="Banner Naruto">
+                </div>
+                <div class="introducao">
+                    <h2>Naruto acompanha a jornada de Naruto Uzumaki, um jovem ninja que deseja se tornar o Hokage, líder de sua aldeia, enquanto lida com a rejeição dos aldeões por ser o recipiente da Raposa de Nove Caudas. Determinado a provar seu valor, ele desenvolve habilidades excepcionais e fortalece laços de amizade com seus companheiros.
+                        Ao longo da série, Naruto enfrenta desafios, como missões perigosas e vilões que ameaçam a paz mundial. A trama explora temas de aceitação, superação e a importância das relações humanas, com o apoio de aliados como Sasuke e Sakura, em sua busca para alcançar seu sonho e proteger sua aldeia.</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="personagens" id="personagens">
+            <div class="interface">
+                <h2 class="titulo">Personagens Principais</h2>
+                <div class="galeria">
+                    <div class="personagem" onclick="abrirModal('naruto')">
+                        <img src="imagens/naruto.png" alt="Naruto Uzumaki">
+                        <h3>Naruto Uzumaki</h3>
+                        <p>O protagonista que deseja ser o Hokage.</p>
+                    </div>
+                    <div class="personagem" onclick="abrirModal('sasuke')">
+                        <img src="imagens/sasuke.png" alt="Sasuke Uchiha">
+                        <h3>Sasuke Uchiha</h3>
+                        <p>O amigo rival de Naruto, em busca de vingança.</p>
+                    </div>
+                    <div class="personagem" onclick="abrirModal('sakura')">
+                        <img src="imagens/sakura.png" alt="Sakura Haruno">
+                        <h3>Sakura Haruno</h3>
+                        <p>Uma ninja médica e amiga de Naruto e Sasuke.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="episodios">
+            <h2 class="titulo">Episódios Favoritos</h2>
+            <div class="episodios-lista">
+                <div class="episodio">
+                    <h3>Episódio 162</h3>
+                    <p><strong>Título:</strong> O Mundo Conhecerá a Dor</p>
+                    <img src="imagens/episodio162.png" alt="Episódio 162">
+                    <button onclick="assistirTrailer('trailer1')">Assistir ao Trailer</button>
+                </div>
+                <div class="episodio">
+                    <h3>Episódio 391</h3>
+                    <p><strong>Título:</strong> A Ascensão de Uchiha Madara</p>
+                    <img src="imagens/episodio391.png" alt="Episódio 391">
+                    <button onclick="assistirTrailer('trailer2')">Assistir ao Trailer</button>
+                </div>
+                <div class="episodio">
+                    <h3>Episódio 473</h3>
+                    <p><strong>Título:</strong> Sharingan: Novamente</p>
+                    <img src="imagens/episodio473.png" alt="Episódio 473">
+                    <button onclick="assistirTrailer('trailer3')">Assistir ao Trailer</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="contato" id="contato">
+            <h2 class="titulo">Contato</h2>
+            <div class="interface">
+                <div class="formulario">
+                    <form class="form" id="contatoForm">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+                
+                <div class="mensagemSucesso" id="sucessoMensagem">
+                    <h3>Mensagem enviada com sucesso!</h3>
+                    <img src="imagens/naruto_beleza.jpg" alt="Enviado com Sucesso!">
+                </div>
+            </div>
+        </section>
+
+        <div id="modal" class="modal">
+            <div class="modal-conteudo">
+                <h2 id="nome-completo"></h2>
+                <img id="imagem-personagem" src="" alt="">
+                <p id="descricao-detalhada"></p>
+                <button onclick="fecharModal()">Voltar à Galeria</button>
+            </div>
+        </div>        
+
+        <div id="myModal" class="modalVideo">
+            <div class="modalVideo-content">
+                <iframe id="trailerIframe" width="100%" height="315" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button onclick="fecharmyModal()">Voltar à Galeria</button>
+            </div>
+        </div>
+
+        <footer class="desenvolvedor">
+            <p>Desenvolvido por Rodolfo Parreiras</p>
+            <a href="https://github.com/Rodolfin05"><i class="fi fi-brands-github"></i></a>
+            <a href="https://www.instagram.com/souza_05_parreiras/"> <i class="fi fi-brands-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/rodolfo-souza-da-silva-parreiras-902533320/"><i class="fi fi-brands-linkedin"></i></a>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+    </html>
